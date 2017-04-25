@@ -63,7 +63,9 @@
 					return;
 				}
 
-				e.preventDefault();
+				if (!$(e.target).closest('#virtualKeyboard').length) {
+				    e.preventDefault();
+				}
 
 				// this part prevents a double callback from touch and mouse on the same tap
 
